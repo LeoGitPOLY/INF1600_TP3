@@ -66,6 +66,7 @@ cmpl %ecx, %ebx
 jge call_methode
 
 movl (%esp), %edx
+pushl %eax
 pushl %ecx
 pushl %ebx
 pushl %edx
@@ -73,6 +74,7 @@ call swapRefs
 popl %edx
 popl %ebx
 popl %ecx
+popl %eax
 
 jmp boucle_inf
 
